@@ -34,4 +34,4 @@ settlementPrices:([] instrument:`symbol$(); settlementDate:`date$(); price:`floa
 {`pfe insert x} each {(x; rand[1000000.0]; rand[2.0]; rand[0.05]; 1 + rand[90]; rand[500000.0]; .z.p - rand[1])} each genMemberIDs[];
 
 / Populate settlementPrices table
-{`settlementPrices insert x} each {(y; .z.d - rand[90]; rand[5000.0]; .z.p - rand[1])} each genTickerSymbols[];
+{`settlementPrices insert x} each {(x; .z.d - rand[90]; rand[5000.0]; .z.p - rand[1])} each genTickerSymbols[];
