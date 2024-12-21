@@ -28,7 +28,7 @@ settlementPrices:([] instrument:`symbol$(); settlementDate:`date$(); price:`floa
 {`stressLosses insert x} each {(x; rand[1000000.0]; rand[0.2]; rand[200000.0]; .z.d - rand[30])} each genMemberIDs[]
 
 / Populate liquidityCoverage table
-{liquidityCoverage insert x} each {(x; rand[1000000.0]; rand[500000.0]; rand[3.0]; .z.p - rand[1])} each genMemberIDs[];
+{`liquidityCoverage insert x} each {(x; rand[1000000.0]; rand[500000.0]; rand[3.0]; .z.p - rand[1])} each genMemberIDs[];
 
 / Populate pfe table
 {`pfe insert x} each {(x; rand[1000000.0]; rand[2.0]; rand[0.05]; 1 + rand[90]; rand[500000.0]; .z.p - rand[1])} each genMemberIDs[];
